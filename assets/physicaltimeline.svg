@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 963 735">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #f2f2f2;
+      }
+
+      .st1, .st2, .st4, .st5 {
+        stroke-linejoin: bevel;
+      }
+
+      .st1, .st5 {
+        stroke-linecap: square;
+      }
+
+      .st6 {
+        fill: #333;
+      }
+
+      .st6, .st7, .st8 {
+        font-family: ArialMT, Arial;
+        font-size: 12px;
+        isolation: isolate;
+      }
+
+      .st2 {
+        stroke: #333;
+      }
+
+      .st3 {
+        stroke: #b26a6a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6.7px;
+      }
+
+      .st4, .st5 {
+        stroke: #f5f5f5;
+      }
+
+      .st9 {
+        clip-path: url(#clippath-17);
+      }
+
+      .st10 {
+        clip-path: url(#clippath-19);
+      }
+
+      .st11 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st12 {
+        clip-path: url(#clippath-16);
+      }
+
+      .st13 {
+        clip-path: url(#clippath-18);
+      }
+
+      .st14 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st15 {
+        clip-path: url(#clippath-15);
+      }
+
+      .st16 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st17 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st18 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st19 {
+        clip-path: url(#clippath-55);
+      }
+
+      .st20 {
+        clip-path: url(#clippath-32);
+      }
+
+      .st21 {
+        clip-path: url(#clippath-33);
+      }
+
+      .st22 {
+        clip-path: url(#clippath-35);
+      }
+
+      .st23 {
+        clip-path: url(#clippath-27);
+      }
+
+      .st24 {
+        clip-path: url(#clippath-20);
+      }
+
+      .st25 {
+        clip-path: url(#clippath-21);
+      }
+
+      .st26 {
+        clip-path: url(#clippath-22);
+      }
+
+      .st27 {
+        clip-path: url(#clippath-23);
+      }
+
+      .st28 {
+        clip-path: url(#clippath-24);
+      }
+
+      .st29 {
+        clip-path: url(#clippath-25);
+      }
+
+      .st30 {
+        clip-path: url(#clippath-43);
+      }
+
+      .st31 {
+        clip-path: url(#clippath-40);
+      }
+
+      .st32 {
+        clip-path: url(#clippath-87);
+      }
+
+      .st33 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st34 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st35 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st36 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st37 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st38 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st39 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st40 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st41 {
+        fill: #fff;
+      }
+
+      .st7 {
+        fill: #2e2e2e;
+      }
+
+      .st8 {
+        fill: #666;
+      }
+
+      .st42 {
+        fill: #b26a6a;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st0" x="69" y="678" width="890" height="57"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-12">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-17">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-20">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-23">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-24">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-25">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-26">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-27">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-28">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-29">
+      <rect class="st0" x="-1" y="-1" width="72" height="681"/>
+    </clipPath>
+    <clipPath id="clippath-30">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-31">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-32">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-33">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-34">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-35">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-36">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-37">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-38">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-39">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-40">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-41">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-42">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-43">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-44">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-45">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-46">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-47">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-48">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-49">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-50">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-51">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-52">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-53">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-54">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-55">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-56">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-57">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-58">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-59">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-60">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-61">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-62">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-63">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-64">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-65">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-66">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-67">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-68">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-69">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-70">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-71">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-72">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-73">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-74">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-75">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-76">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-77">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-78">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-79">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-80">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-81">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-82">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-83">
+      <rect class="st0" x="70" width="888" height="679"/>
+    </clipPath>
+    <clipPath id="clippath-84">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-85">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-86">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-87">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+    <clipPath id="clippath-88">
+      <rect class="st0" x="70" width="889" height="680"/>
+    </clipPath>
+  </defs>
+  <rect class="st41" width="958" height="734"/>
+  <rect class="st41" width="958" height="734"/>
+  <g class="st33">
+    <g>
+      <line class="st4" x1="113" y1="679" x2="113" y2="684" vector-effect="none"/>
+      <line class="st4" x1="380" y1="679" x2="380" y2="684" vector-effect="none"/>
+      <line class="st4" x1="647" y1="679" x2="647" y2="684" vector-effect="none"/>
+      <line class="st4" x1="914" y1="679" x2="914" y2="684" vector-effect="none"/>
+    </g>
+  </g>
+  <g class="st36">
+    <g>
+      <line class="st4" x1="90" y1="679" x2="90" y2="681" vector-effect="none"/>
+      <line class="st4" x1="136" y1="679" x2="136" y2="681" vector-effect="none"/>
+      <line class="st4" x1="156" y1="679" x2="156" y2="681" vector-effect="none"/>
+      <line class="st4" x1="179" y1="679" x2="179" y2="681" vector-effect="none"/>
+      <line class="st4" x1="201" y1="679" x2="201" y2="681" vector-effect="none"/>
+      <line class="st4" x1="223" y1="679" x2="223" y2="681" vector-effect="none"/>
+      <line class="st4" x1="245" y1="679" x2="245" y2="681" vector-effect="none"/>
+      <line class="st4" x1="268" y1="679" x2="268" y2="681" vector-effect="none"/>
+      <line class="st4" x1="291" y1="679" x2="291" y2="681" vector-effect="none"/>
+      <line class="st4" x1="313" y1="679" x2="313" y2="681" vector-effect="none"/>
+      <line class="st4" x1="335" y1="679" x2="335" y2="681" vector-effect="none"/>
+      <line class="st4" x1="357" y1="679" x2="357" y2="681" vector-effect="none"/>
+      <line class="st4" x1="403" y1="679" x2="403" y2="681" vector-effect="none"/>
+      <line class="st4" x1="423" y1="679" x2="423" y2="681" vector-effect="none"/>
+      <line class="st4" x1="446" y1="679" x2="446" y2="681" vector-effect="none"/>
+      <line class="st4" x1="468" y1="679" x2="468" y2="681" vector-effect="none"/>
+      <line class="st4" x1="490" y1="679" x2="490" y2="681" vector-effect="none"/>
+      <line class="st4" x1="512" y1="679" x2="512" y2="681" vector-effect="none"/>
+      <line class="st4" x1="535" y1="679" x2="535" y2="681" vector-effect="none"/>
+      <line class="st4" x1="558" y1="679" x2="558" y2="681" vector-effect="none"/>
+      <line class="st4" x1="580" y1="679" x2="580" y2="681" vector-effect="none"/>
+      <line class="st4" x1="602" y1="679" x2="602" y2="681" vector-effect="none"/>
+      <line class="st4" x1="624" y1="679" x2="624" y2="681" vector-effect="none"/>
+      <line class="st4" x1="670" y1="679" x2="670" y2="681" vector-effect="none"/>
+      <line class="st4" x1="690" y1="679" x2="690" y2="681" vector-effect="none"/>
+      <line class="st4" x1="713" y1="679" x2="713" y2="681" vector-effect="none"/>
+      <line class="st4" x1="735" y1="679" x2="735" y2="681" vector-effect="none"/>
+      <line class="st4" x1="758" y1="679" x2="758" y2="681" vector-effect="none"/>
+      <line class="st4" x1="779" y1="679" x2="779" y2="681" vector-effect="none"/>
+      <line class="st4" x1="802" y1="679" x2="802" y2="681" vector-effect="none"/>
+      <line class="st4" x1="825" y1="679" x2="825" y2="681" vector-effect="none"/>
+      <line class="st4" x1="847" y1="679" x2="847" y2="681" vector-effect="none"/>
+      <line class="st4" x1="869" y1="679" x2="869" y2="681" vector-effect="none"/>
+      <line class="st4" x1="891" y1="679" x2="891" y2="681" vector-effect="none"/>
+      <line class="st4" x1="937" y1="679" x2="937" y2="681" vector-effect="none"/>
+    </g>
+  </g>
+  <g class="st34">
+    <text class="st8" transform="translate(100.2 697)"><tspan x="0" y="0">2021</tspan></text>
+  </g>
+  <g class="st35">
+    <text class="st8" transform="translate(367.2 697)"><tspan x="0" y="0">2022</tspan></text>
+  </g>
+  <g class="st40">
+    <text class="st8" transform="translate(634.2 697)"><tspan x="0" y="0">2023</tspan></text>
+  </g>
+  <g class="st38">
+    <text class="st8" transform="translate(901.2 697)"><tspan x="0" y="0">2024</tspan></text>
+  </g>
+  <g class="st37">
+    <text class="st6" transform="translate(501.2 724)"><tspan x="0" y="0">Year</tspan></text>
+  </g>
+  <g class="st39">
+    <rect class="st41" width="70" height="679"/>
+  </g>
+  <g class="st14">
+    <g>
+      <line class="st2" x1="65" y1="679" x2="70" y2="679" vector-effect="none"/>
+      <line class="st2" x1="65" y1="632" x2="70" y2="632" vector-effect="none"/>
+      <line class="st2" x1="65" y1="586" x2="70" y2="586" vector-effect="none"/>
+      <line class="st2" x1="65" y1="539" x2="70" y2="539" vector-effect="none"/>
+      <line class="st2" x1="65" y1="492" x2="70" y2="492" vector-effect="none"/>
+      <line class="st2" x1="65" y1="446" x2="70" y2="446" vector-effect="none"/>
+      <line class="st2" x1="65" y1="399" x2="70" y2="399" vector-effect="none"/>
+      <line class="st2" x1="65" y1="352" x2="70" y2="352" vector-effect="none"/>
+      <line class="st2" x1="65" y1="305" x2="70" y2="305" vector-effect="none"/>
+      <line class="st2" x1="65" y1="259" x2="70" y2="259" vector-effect="none"/>
+      <line class="st2" x1="65" y1="212" x2="70" y2="212" vector-effect="none"/>
+      <line class="st2" x1="65" y1="165" x2="70" y2="165" vector-effect="none"/>
+      <line class="st2" x1="65" y1="119" x2="70" y2="119" vector-effect="none"/>
+      <line class="st2" x1="65" y1="72" x2="70" y2="72" vector-effect="none"/>
+      <line class="st2" x1="65" y1="25" x2="70" y2="25" vector-effect="none"/>
+    </g>
+  </g>
+  <g class="st11">
+    <text class="st7" transform="translate(39.7 676)"><tspan x="0" y="0">50M</tspan></text>
+  </g>
+  <g class="st18">
+    <text class="st7" transform="translate(39.7 636)"><tspan x="0" y="0">52M</tspan></text>
+  </g>
+  <g class="st16">
+    <text class="st7" transform="translate(39.7 590)"><tspan x="0" y="0">54M</tspan></text>
+  </g>
+  <g class="st17">
+    <text class="st7" transform="translate(39.7 543)"><tspan x="0" y="0">56M</tspan></text>
+  </g>
+  <g class="st15">
+    <text class="st7" transform="translate(39.7 496)"><tspan x="0" y="0">58M</tspan></text>
+  </g>
+  <g class="st12">
+    <text class="st7" transform="translate(39.7 450)"><tspan x="0" y="0">60M</tspan></text>
+  </g>
+  <g class="st9">
+    <text class="st7" transform="translate(39.7 403)"><tspan x="0" y="0">62M</tspan></text>
+  </g>
+  <g class="st13">
+    <text class="st7" transform="translate(39.7 356)"><tspan x="0" y="0">64M</tspan></text>
+  </g>
+  <g class="st10">
+    <text class="st7" transform="translate(39.7 309)"><tspan x="0" y="0">66M</tspan></text>
+  </g>
+  <g class="st24">
+    <text class="st7" transform="translate(39.7 263)"><tspan x="0" y="0">68M</tspan></text>
+  </g>
+  <g class="st25">
+    <text class="st7" transform="translate(39.7 216)"><tspan x="0" y="0">70M</tspan></text>
+  </g>
+  <g class="st26">
+    <text class="st7" transform="translate(39.7 169)"><tspan x="0" y="0">72M</tspan></text>
+  </g>
+  <g class="st27">
+    <text class="st7" transform="translate(39.7 123)"><tspan x="0" y="0">74M</tspan></text>
+  </g>
+  <g class="st28">
+    <text class="st7" transform="translate(39.7 76)"><tspan x="0" y="0">76M</tspan></text>
+  </g>
+  <g class="st29">
+    <text class="st7" transform="translate(39.7 29)"><tspan x="0" y="0">78M</tspan></text>
+  </g>
+  <g class="st23">
+    <text class="st7" transform="translate(17.9 406.5) rotate(-90)"><tspan x="0" y="0">Physical Books Borrowed</tspan></text>
+  </g>
+  <g class="st20">
+    <rect class="st41" x="70" width="889" height="680"/>
+  </g>
+  <g class="st21">
+    <rect class="st41" x="70" width="889" height="680"/>
+  </g>
+  <g class="st22">
+    <rect class="st41" x="70" width="889" height="680"/>
+  </g>
+  <g class="st31">
+    <rect class="st41" x="70" width="889" height="680"/>
+  </g>
+  <g class="st30">
+    <g>
+      <line class="st1" x1="70" y1="679" x2="958" y2="679" vector-effect="none"/>
+      <line class="st1" x1="70" y1="632" x2="958" y2="632" vector-effect="none"/>
+      <line class="st1" x1="70" y1="586" x2="958" y2="586" vector-effect="none"/>
+      <line class="st1" x1="70" y1="539" x2="958" y2="539" vector-effect="none"/>
+      <line class="st1" x1="70" y1="492" x2="958" y2="492" vector-effect="none"/>
+      <line class="st1" x1="70" y1="446" x2="958" y2="446" vector-effect="none"/>
+      <line class="st1" x1="70" y1="399" x2="958" y2="399" vector-effect="none"/>
+      <line class="st1" x1="70" y1="352" x2="958" y2="352" vector-effect="none"/>
+      <line class="st1" x1="70" y1="305" x2="958" y2="305" vector-effect="none"/>
+      <line class="st1" x1="70" y1="259" x2="958" y2="259" vector-effect="none"/>
+      <line class="st1" x1="70" y1="212" x2="958" y2="212" vector-effect="none"/>
+      <line class="st1" x1="70" y1="165" x2="958" y2="165" vector-effect="none"/>
+      <line class="st1" x1="70" y1="119" x2="958" y2="119" vector-effect="none"/>
+      <line class="st1" x1="70" y1="72" x2="958" y2="72" vector-effect="none"/>
+      <line class="st1" x1="70" y1="25" x2="958" y2="25" vector-effect="none"/>
+    </g>
+  </g>
+  <rect class="st0" x="70" width="888" height="679"/>
+  <polyline class="st3" points="113.9 508.2 381 118.3 648 97.2 915.1 157.3" vector-effect="none"/>
+  <g class="st19">
+    <path class="st1" d="M70,0" vector-effect="none"/>
+  </g>
+  <g class="st32">
+    <g>
+      <line class="st5" x1="70" y1="679" x2="958" y2="679" vector-effect="none"/>
+      <line class="st5" x1="70" x2="70" y2="679" vector-effect="none"/>
+    </g>
+  </g>
+  <g>
+    <circle class="st42" cx="120.9" cy="507.6" r="19.7"/>
+    <g id="AuQe9Q.tif">
+      <g>
+        <path class="st41" d="M113.1,499.3c2.4,0,5,.7,6.6,2.4s.8.9.8,1.1v12.2c-1.8-1.7-4.2-2.3-6.7-2.5s-1.5.1-1.6-.8v-11.6c0-.4.4-.7.8-.7s.1,0,.2,0Z"/>
+        <path class="st41" d="M129.4,499.3c.4,0,.7.4.8.7v11.6c0,1-.9.8-1.6.8-2.5.2-4.9.9-6.7,2.5v-12.2c0-.3.6-.9.8-1.1,1.6-1.7,4.2-2.3,6.6-2.4s.1,0,.2,0Z"/>
+        <path class="st41" d="M132.9,502.6v12.6c-.1.3-.4.6-.8.6s-1.6-.3-2.2-.4c-1.9-.2-3.9-.3-5.8,0s-.8.1-1.1.2c1.2-1.1,3.1-1.7,4.8-1.9s2.4.1,3.3-.9.4-.7.4-.8v-10h.8c.3,0,.6.4.7.6Z"/>
+        <path class="st41" d="M110.8,502v10c0,.2.3.7.4.8.8,1,2.1.8,3.3.9s3.5.8,4.8,1.9c-.4,0-.8-.1-1.1-.2-1.9-.3-3.9-.2-5.8,0s-1.6.4-2.1.4-.8-.3-.9-.8v-12.3c0-.2.1-.5.4-.6s.3-.1.3-.1h.8Z"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <circle class="st42" cx="380.6" cy="122.8" r="19.7"/>
+    <g id="AuQe9Q.tif1" data-name="AuQe9Q.tif">
+      <g>
+        <path class="st41" d="M372.7,114.5c2.4,0,5,.7,6.6,2.4s.8.9.8,1.1v12.2c-1.8-1.7-4.2-2.3-6.7-2.5s-1.5.1-1.6-.8v-11.6c0-.4.4-.7.8-.7s.1,0,.2,0Z"/>
+        <path class="st41" d="M389,114.5c.4,0,.7.4.8.7v11.6c0,1-.9.8-1.6.8-2.5.2-4.9.9-6.7,2.5v-12.2c0-.3.6-.9.8-1.1,1.6-1.7,4.2-2.3,6.6-2.4s.1,0,.2,0Z"/>
+        <path class="st41" d="M392.5,117.8v12.6c-.1.3-.4.6-.8.6s-1.6-.3-2.2-.4c-1.9-.2-3.9-.3-5.8,0s-.8.1-1.1.2c1.2-1.1,3.1-1.7,4.8-1.9s2.4.1,3.3-.9.4-.7.4-.8v-10h.8c.3,0,.6.4.7.6Z"/>
+        <path class="st41" d="M370.5,117.2v10c0,.2.3.7.4.8.8,1,2.1.8,3.3.9s3.5.8,4.8,1.9c-.4,0-.8-.1-1.1-.2-1.9-.3-3.9-.2-5.8,0s-1.6.4-2.1.4-.8-.3-.9-.8v-12.3c0-.2.1-.5.4-.6s.3-.1.3-.1h.8Z"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <circle class="st42" cx="654.2" cy="97.2" r="19.7"/>
+    <g id="AuQe9Q.tif2" data-name="AuQe9Q.tif">
+      <g>
+        <path class="st41" d="M646.4,89c2.4,0,5,.7,6.6,2.4s.8.9.8,1.1v12.2c-1.8-1.7-4.2-2.3-6.7-2.5s-1.5.1-1.6-.8v-11.6c0-.4.4-.7.8-.7s.1,0,.2,0Z"/>
+        <path class="st41" d="M662.6,89c.4,0,.7.4.8.7v11.6c0,1-.9.8-1.6.8-2.5.2-4.9.9-6.7,2.5v-12.2c0-.3.6-.9.8-1.1,1.6-1.7,4.2-2.3,6.6-2.4s.1,0,.2,0Z"/>
+        <path class="st41" d="M666.2,92.2v12.6c-.1.3-.4.6-.8.6s-1.6-.3-2.2-.4c-1.9-.2-3.9-.3-5.8,0s-.8.1-1.1.2c1.2-1.1,3.1-1.7,4.8-1.9s2.4.1,3.3-.9.4-.7.4-.8v-10h.8c.3,0,.6.4.7.6Z"/>
+        <path class="st41" d="M644.1,91.7v10c0,.2.3.7.4.8.8,1,2.1.8,3.3.9s3.5.8,4.8,1.9c-.4,0-.8-.1-1.1-.2-1.9-.3-3.9-.2-5.8,0s-1.6.4-2.1.4-.8-.3-.9-.8v-12.3c0-.2.1-.5.4-.6s.3-.1.3-.1h.8Z"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <circle class="st42" cx="921.2" cy="160.4" r="19.7"/>
+    <g id="AuQe9Q.tif3" data-name="AuQe9Q.tif">
+      <g>
+        <path class="st41" d="M913.4,152.1c2.4,0,5,.7,6.6,2.4s.8.9.8,1.1v12.2c-1.8-1.7-4.2-2.3-6.7-2.5s-1.5.1-1.6-.8v-11.6c0-.4.4-.7.8-.7s.1,0,.2,0Z"/>
+        <path class="st41" d="M929.6,152.1c.4,0,.7.4.8.7v11.6c0,1-.9.8-1.6.8-2.5.2-4.9.9-6.7,2.5v-12.2c0-.3.6-.9.8-1.1,1.6-1.7,4.2-2.3,6.6-2.4s.1,0,.2,0Z"/>
+        <path class="st41" d="M933.2,155.4v12.6c-.1.3-.4.6-.8.6s-1.6-.3-2.2-.4c-1.9-.2-3.9-.3-5.8,0s-.8.1-1.1.2c1.2-1.1,3.1-1.7,4.8-1.9s2.4.1,3.3-.9.4-.7.4-.8v-10h.8c.3,0,.6.4.7.6Z"/>
+        <path class="st41" d="M911.1,154.8v10c0,.2.3.7.4.8.8,1,2.1.8,3.3.9s3.5.8,4.8,1.9c-.4,0-.8-.1-1.1-.2-1.9-.3-3.9-.2-5.8,0s-1.6.4-2.1.4-.8-.3-.9-.8v-12.3c0-.2.1-.5.4-.6s.3-.1.3-.1h.8Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
