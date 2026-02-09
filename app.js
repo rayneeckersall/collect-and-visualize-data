@@ -51,11 +51,13 @@ function setMode(next){
   // swap the main “single mode” charts
   if (next === "audio") {
     swapImg("prefImg", "assets/audiopreferences.svg");
+    swapImg("booksImg", "assets/audiobooksread.svg");
     swapImg("timelineImg", "assets/audiobooktimeline.svg");
     swapImg("ageImg", "assets/audiobookage.svg");
     swapImg("eduImg", "assets/Audiobook Education.svg");
   } else if (next === "physical") {
     swapImg("prefImg", "assets/physicalpreferences.svg");
+    swapImg("booksImg", "assets/physicalbooksread.svg");
     swapImg("timelineImg", "assets/physicaltimeline.svg");
     swapImg("ageImg", "assets/physicalage.svg");
     swapImg("eduImg", "assets/Physical Book Education.svg");
@@ -81,6 +83,12 @@ function setMode(next){
       summary.style.background = "linear-gradient(to right, rgba(178,106,106,.12), rgba(90,110,165,.12))";
     }
   }
+
+  const combined = document.getElementById("combinedCharts");
+if (combined) {
+  combined.style.display = next === "compare" ? "" : "none";
+}
+
 }
 
 
