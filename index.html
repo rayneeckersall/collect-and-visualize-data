@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audiobooks vs Physical Books — Interactive Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="wrap" data-theme="day" id="app">
+    <section class="hero">
+      <div class="hero-top">
+        <div class="stars"></div>
+        <div class="moon" aria-hidden="true"></div>
+
+        <div class="title">
+          <div>
+            <h1>Audiobooks vs Physical Books | Does the Medium Make a Difference?</h1>
+            <p>Reading has many benefits. This dashboard compares patterns across formats and lets you switch views, explore charts, and add insights.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="clouds" aria-hidden="true"></div>
+
+        <div class="toolbar">
+          <div class="segmented" role="group" aria-label="Select reading medium">
+            <button id="btnAudio" aria-pressed="false" title="View Audiobook mode">
+              <span class="dot a"></span> Audiobook
+            </button>
+            <button id="btnPhysical" aria-pressed="true" title="View Physical Book mode">
+              <span class="dot p"></span> Physical Books
+            </button>
+            <button id="btnCompare" aria-pressed="false" title="Compare both side-by-side">
+              ⇄ Compare
+            </button>
+          </div>
+
+          <div class="pillbar">
+            <div class="pill secondary" id="openHelp" title="How to interact with charts">✨ How to use</div>
+            <div class="pill" id="openSources" title="Open sources panel">📎 Sources</div>
+          </div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Dashboard sections">
+          <button class="tab" role="tab" aria-selected="true" data-tab="overview">Overview</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="trends">Trends</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="demographics">Demographics</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="summary" id="summary">
+      <div>
+        <div class="mini">Now viewing</div>
+        <div class="summary-row">
+          <strong id="modeLabel">Physical Books</strong>
+          <span class="badge" id="focusBadge">Focus: Preferences</span>
+        </div>
+      </div>
+      <div class="right">
+        <span class="badge" id="hintBadge">Tip: use + / − to zoom charts</span>
+      </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section id="panel-overview" class="panel">
+      <div class="grid">
+        <article class="card">
+          <h2>
+            <div>Format Preference <span>(your chart)</span></div>
+            <span>SVG</span>
+          </h2>
+          <div class="body">
+            <div class="chart-frame">
+              <div class="chart-tools">
+                <div class="left">
+                  <button class="iconbtn" data-zoom="in" data-target="prefChart">＋ Zoom</button>
+                  <button class="iconbtn" data-zoom="out" data-target="prefChart">－</button>
+                  <button class="iconbtn" data-zoom="reset" data-target="prefChart">Reset</button>
+                </div>
+                <div class="right">
+                  <div class="chips">
+                    <button class="chip" aria-pressed="false" data-callouts="pref">Show insights</button>
+                    <button class="chip" aria-pressed="false" id="sparklePref">Spotlight hover</button>
+                  </div>
+                </div>
+              </div>
+
+             <div class="svgwrap" id="prefChart" style="transform: scale(1);">
+  <img id="prefImg" src="assets/physicalpreferences.svg" alt="Format preference chart (SVG)" />
+</div>
+
+              <div class="callouts" id="callouts-pref">
+                <div class="callout"><b>Quick read:</b> Preferences can be influenced by accessibility, cost, multitasking, and attention.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>
+            <div>Books Read by Medium <span>(your chart)</span></div>
+            <span>SVG</span>
+          </h2>
+          <div class="body">
+            <div class="chart-frame">
+              <div class="chart-tools">
+                <div class="left">
+                  <button class="iconbtn" data-zoom="in" data-target="booksChart">＋ Zoom</button>
+                  <button class="iconbtn" data-zoom="out" data-target="booksChart">－</button>
+                  <button class="iconbtn" data-zoom="reset" data-target="booksChart">Reset</button>
+                </div>
+                <div class="right">
+                  <div class="chips">
+                    <button class="chip" aria-pressed="false" data-callouts="books">Show insights</button>
+                    <button class="chip" aria-pressed="false" id="sparkleBooks">Spotlight hover</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svgwrap" id="booksChart" style="transform: scale(1);">
+                <img src="assets/Books Read by Medium.svg" alt="Books read by medium chart (SVG)" />
+              </div>
+
+              <div class="callouts" id="callouts-books">
+                <div class="callout"><b>Tip:</b> Use Compare mode to show two interpretations side-by-side.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRENDS -->
+    <section id="panel-trends" class="panel" style="display:none;">
+      <div class="grid">
+        <article class="card">
+          <h2>
+            <div>Timeline <span>(your chart)</span></div>
+            <span>SVG</span>
+          </h2>
+          <div class="body">
+            <div class="chart-frame">
+              <div class="chart-tools">
+                <div class="left">
+                  <button class="iconbtn" data-zoom="in" data-target="timelineChart">＋ Zoom</button>
+                  <button class="iconbtn" data-zoom="out" data-target="timelineChart">－</button>
+                  <button class="iconbtn" data-zoom="reset" data-target="timelineChart">Reset</button>
+                </div>
+                <div class="right">
+                  <div class="chips">
+                    <button class="chip" aria-pressed="false" data-callouts="timeline">Show insights</button>
+                    <button class="chip" aria-pressed="false" id="sparkleTimeline">Spotlight hover</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="svgwrap" id="timelineChart" style="transform: scale(1);">
+  <img id="timelineImg" src="assets/physicaltimeline.svg" alt="Timeline chart (SVG)" />
+</div>
+
+
+              <div class="callouts" id="callouts-timeline">
+                <div class="callout"><b>Story idea:</b> Zoom into the biggest change and explain what might have driven it.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>
+            <div>Quick Controls <span>(interaction)</span></div>
+            <span>Play</span>
+          </h2>
+          <div class="body">
+            <div class="chips" style="margin-bottom:10px;">
+              <button class="chip" aria-pressed="true" id="chipNarrative">Narrative mode</button>
+              <button class="chip" aria-pressed="false" id="chipMinimal">Minimal mode</button>
+              <button class="chip" aria-pressed="false" id="chipTeaching">“Explain it” mode</button>
+            </div>
+            <div class="callout">
+              <b>Narrative mode</b> turns on callouts + stronger accents so it feels like a guided story.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DEMOGRAPHICS -->
+    <section id="panel-demographics" class="panel" style="display:none;">
+      <div class="grid">
+        <article class="card">
+          <h2>
+            <div>Education <span>(swaps by medium)</span></div>
+            <span>Swap</span>
+          </h2>
+          <div class="body">
+            <div class="chart-frame">
+              <div class="chart-tools">
+                <div class="left">
+                  <button class="iconbtn" data-zoom="in" data-target="eduChart">＋ Zoom</button>
+                  <button class="iconbtn" data-zoom="out" data-target="eduChart">－</button>
+                  <button class="iconbtn" data-zoom="reset" data-target="eduChart">Reset</button>
+                </div>
+                <div class="right">
+                  <div class="chips">
+                    <button class="chip" aria-pressed="false" data-callouts="edu">Show insights</button>
+                    <button class="chip" aria-pressed="false" id="sparkleEdu">Spotlight hover</button>
+                  </div>
+                </div>
+              </div>
+
+             <div class="svgwrap" id="eduChart" style="transform: scale(1);">
+  <img id="eduImg" src="assets/Physical Book Education.svg" alt="Education chart (SVG)" />
+</div>
+
+              <div class="callouts" id="callouts-edu">
+                <div class="callout"><b>Why it matters:</b> Demographics can shape format choice and habits.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>
+            <div>Average Age <span>(your chart)</span></div>
+            <span>SVG</span>
+          </h2>
+          <div class="body">
+            <div class="chart-frame">
+              <div class="chart-tools">
+                <div class="left">
+                  <button class="iconbtn" data-zoom="in" data-target="ageChart">＋ Zoom</button>
+                  <button class="iconbtn" data-zoom="out" data-target="ageChart">－</button>
+                  <button class="iconbtn" data-zoom="reset" data-target="ageChart">Reset</button>
+                </div>
+                <div class="right">
+                  <div class="chips">
+                    <button class="chip" aria-pressed="false" data-callouts="age">Show insights</button>
+                    <button class="chip" aria-pressed="false" id="sparkleAge">Spotlight hover</button>
+                  </div>
+                </div>
+              </div>
+
+             <div class="svgwrap" id="ageChart" style="transform: scale(1);">
+  <img id="ageImg" src="assets/physicalage.svg" alt="Average age chart (SVG)" />
+</div>
+
+              <div class="callouts" id="callouts-age">
+                <div class="callout"><b>Idea:</b> Add a context toggle (commute / bedtime / studying / multitasking).</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXTRAS -->
+    <section id="panel-extras" class="panel" style="display:none;">
+
+  <!-- Side-by-side comparison (Audio vs Physical) -->
+  <div class="compare show" id="compareGrid">
+
+    <!-- Audiobook column -->
+    <article class="card">
+      <h2><div>Audiobook <span>(highlighted)</span></div><span>Compare</span></h2>
+      <div class="body">
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/audiopreferences.svg" alt="Audiobook preferences chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/audiobooktimeline.svg" alt="Audiobook timeline chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/audiobookage.svg" alt="Audiobook age chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame">
+          <div class="svgwrap">
+            <img src="assets/Audiobook Education.svg" alt="Audiobook education chart (SVG)" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Physical column -->
+    <article class="card">
+      <h2><div>Physical Books <span>(highlighted)</span></div><span>Compare</span></h2>
+      <div class="body">
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/physicalpreferences.svg" alt="Physical preferences chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/physicaltimeline.svg" alt="Physical timeline chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame" style="margin-bottom:12px;">
+          <div class="svgwrap">
+            <img src="assets/physicalage.svg" alt="Physical age chart (SVG)" />
+          </div>
+        </div>
+        <div class="chart-frame">
+          <div class="svgwrap">
+            <img src="assets/Physical Book Education.svg" alt="Physical education chart (SVG)" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+<!-- EXTRAS -->
+  <!-- Combined charts (show both formats in one chart) -->
+  <div class="grid" style="margin-top:14px;">
+    <article class="card">
+      <h2><div>Books Read by Medium <span>(combined)</span></div><span>SVG</span></h2>
+      <div class="body">
+        <div class="chart-frame">
+          <div class="svgwrap">
+            <img src="assets/Books Read by Medium.svg" alt="Books read by medium (SVG)" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2><div>Average Age by Medium <span>(combined)</span></div><span>SVG</span></h2>
+      <div class="body">
+        <div class="chart-frame">
+          <div class="svgwrap">
+            <img src="assets/Avg. Age of Medium.svg" alt="Average age of medium (SVG)" />
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+</section>
+
+
+    <!-- Modals -->
+    <div class="modalbackdrop" id="modalHelp" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-label="How to use dashboard">
+        <header>
+          <b>How to use this dashboard</b>
+          <button class="iconbtn" data-close="help">Close</button>
+        </header>
+        <div class="content">
+          <ul>
+            <li>Toggle medium at the top: <b>Audiobook</b>, <b>Physical</b>, or <b>Compare</b>.</li>
+            <li>Each chart has <b>＋ / − / Reset</b> controls.</li>
+            <li>Keyboard: <b>+</b> and <b>-</b> zoom the last clicked chart. <b>R</b> resets.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="modalbackdrop" id="modalSources" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-label="Sources">
+        <header>
+          <b>Sources / Notes</b>
+          <button class="iconbtn" data-close="sources">Close</button>
+        </header>
+        <div class="content">
+          <ul>
+            <li><b>Timeline:</b> (paste your single credible source link here)</li>
+            <li><b>Demographics:</b> (paste education + avg age source links here)</li>
+            <li><b>Preference poll:</b> (your Reddit poll details)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
