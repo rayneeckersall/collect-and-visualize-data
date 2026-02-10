@@ -16,7 +16,7 @@
 
         <div class="title">
           <div>
-            <h1>Audiobooks vs Physical Books | Does the Medium Make a Difference?</h1>
+            <h1>Audiobooks vs Physical Books | Analyzing The Two Mediums.</h1>
             <p>Reading has many benefits. This dashboard compares patterns across formats and lets you switch views, explore charts, and add insights.</p>
           </div>
         </div>
@@ -90,8 +90,10 @@
               </div>
 
              <div class="svgwrap" id="prefChart" style="transform: scale(1);">
-  <img id="prefImg" src="assets/physicalpreferences.svg" alt="Format preference chart (SVG)" />
+  <div id="prefPie" class="pieHost"></div>
 </div>
+
+<div class="pieTip" id="prefPieTip" style="display:none;"></div>
 
               <div class="callouts" id="callouts-pref">
                 <div class="callout"><b>Quick read:</b> Preferences can be influenced by accessibility, cost, multitasking, and attention.</div>
@@ -122,8 +124,10 @@
               </div>
 
               <div class="svgwrap" id="booksChart" style="transform: scale(1);">
-  <img id="booksImg" src="assets/physicalbooksread.svg" alt="Books read chart (SVG)" />
+  <div id="booksBar" class="barHost"></div>
 </div>
+
+<div class="barTip" id="booksBarTip" style="display:none;"></div>
 
 
               <div class="callouts" id="callouts-books">
@@ -158,9 +162,10 @@
                   </div>
                 </div>
               </div>
-
+<div class="grid" style="grid-template-columns: 1fr;">
               <div class="svgwrap" id="timelineChart" style="transform: scale(1);">
   <img id="timelineImg" src="assets/physicaltimeline.svg" alt="Timeline chart (SVG)" />
+</div>
 </div>
 
 
@@ -171,7 +176,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <!-- <article class="card">
           <h2>
             <div>Quick Controls <span>(interaction)</span></div>
             <span>Play</span>
@@ -186,7 +191,7 @@
               <b>Narrative mode</b> turns on callouts + stronger accents so it feels like a guided story.
             </div>
           </div>
-        </article>
+        </article> -->
       </div>
     </section>
 
