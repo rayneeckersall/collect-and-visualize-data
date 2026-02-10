@@ -139,9 +139,9 @@
       </div>
     </section>
 
-    <!-- TRENDS -->
+   <!-- TRENDS -->
     <section id="panel-trends" class="panel" style="display:none;">
-      <div class="grid">
+      <div class="grid grid-1">
         <article class="card">
           <h2>
             <div>Timeline <span>(your chart)</span></div>
@@ -162,8 +162,8 @@
                   </div>
                 </div>
               </div>
-<div class="grid" style="grid-template-columns: 1fr;">
-              <div class="svgwrap" id="timelineChart" style="transform: scale(1);">
+<div class="svgwrap" style="grid-template-columns: 1fr;">
+               <div class="svgwrap" id="timelineChart" style="transform: scale(1);">
   <img id="timelineImg" src="assets/physicaltimeline.svg" alt="Timeline chart (SVG)" />
 </div>
 </div>
@@ -252,8 +252,10 @@
               </div>
 
              <div class="svgwrap" id="ageChart" style="transform: scale(1);">
-  <img id="ageImg" src="assets/physicalage.svg" alt="Average age chart (SVG)" />
+  <div id="ageViz" class="ageHost"></div>
 </div>
+
+<div class="ageTip" id="ageTip" style="display:none;"></div>
 
               <div class="callouts" id="callouts-age">
                 <div class="callout"><b>Idea:</b> Add a context toggle (commute / bedtime / studying / multitasking).</div>

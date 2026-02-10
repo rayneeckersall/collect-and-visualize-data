@@ -212,6 +212,185 @@ function getDefaultBarKey(mode){
   return null;
 }
 
+function renderAgeViz(mode){
+  const host = document.getElementById("ageViz");
+  const tip  = document.getElementById("ageTip");
+  if (!host || !tip) return;
+
+  const accent = getPrefAccent(mode);
+  const defaultKey =
+    mode === "audio" ? "Audiobook" :
+    mode === "physical" ? "Physical Book" :
+    null;
+
+  const greyA = "rgba(31,36,48,.22)";
+  const greyB = "rgba(31,36,48,.32)";
+
+  // scale range for the gauge
+  const MIN = 18;
+  const MAX = 65;
+
+  let data = [];
+
+if (mode === "audio") {
+  data = [{ key: "Audiobook", label: "Audiobook users", value: 45 }];
+} else if (mode === "physical") {
+  data = [{ key: "Physical Book", label: "Physical book users", value: 47 }];
+} else {
+  // Compare mode: show nothing for now (or later: show both)
+  data = [];
+}
+
+if (data.length === 0) {
+  host.innerHTML = `
+    <div style="padding:12px; color: rgba(31,36,48,.55); font-size:13px;">
+      Switch to Audiobook or Physical to view age.
+    </div>
+  `;
+  return;
+}
+
+  const pct = (v) => {
+    const clamped = Math.max(MIN, Math.min(MAX, v));
+    return (clamped - MIN) / (MAX - MIN); // 0..1
+  };
+
+  // ring settings
+  const size = 260;
+  const cx = size/2, cy = size/2;
+  const r = 86;
+  const stroke = 18;
+  const C = 2 * Math.PI * r;
+
+  host.innerHTML = data.map((d, i) => {
+    const isDefault = defaultKey && d.key === defaultKey;
+    const mainColor = isDefault ? accent : (i === 0 ? greyA : greyB);
+
+    const p = pct(d.value);
+    const dash = (C * p).toFixed(1);
+    const gap = (C - C * p).toFixed(1);
+
+    return `
+      <div class="ageCol ageRing" data-key="${d.key}" data-label="${d.label}" data-value="${d.value}">
+        <div class="ageLabel">
+          <div class="name">${d.key === "Audiobook" ? "Audiobooks" : "Physical"}</div>
+          <div class="val"><span class="num">${d.value}</span></div>
+        </div>
+
+        <svg viewBox="0 0 ${size} ${size}" class="ringSvg" aria-label="${d.label} average age">
+          <defs>
+            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- background track -->
+          <circle cx="${cx}" cy="${cy}" r="${r}"
+                  fill="none"
+                  stroke="rgba(31,36,48,.10)"
+                  stroke-width="${stroke}" />
+
+          <!-- value ring -->
+          <circle class="ringVal"
+                  cx="${cx}" cy="${cy}" r="${r}"
+                  fill="none"
+                  stroke="${mainColor}"
+                  stroke-width="${stroke}"
+                  stroke-linecap="round"
+                  stroke-dasharray="${dash} ${gap}"
+                  transform="rotate(-90 ${cx} ${cy})"
+                  filter="url(#softGlow)" />
+
+          <!-- center text -->
+          <text x="${cx}" y="${cy-4}" text-anchor="middle"
+                font-size="28" font-weight="900" fill="rgba(31,36,48,.88)">
+            ${d.value}
+          </text>
+          <text x="${cx}" y="${cy+22}" text-anchor="middle"
+                font-size="12" fill="rgba(31,36,48,.55)">
+            avg age
+          </text>
+
+          <!-- tiny scale hint -->
+          <text x="${cx}" y="${size-18}" text-anchor="middle"
+                font-size="11" fill="rgba(31,36,48,.40)">
+            scaled ${MIN}–${MAX}
+          </text>
+        </svg>
+
+        <div class="ageHint">Hover ring for details</div>
+      </div>
+    `;
+  }).join("");
+
+  const cols = host.querySelectorAll(".ageRing");
+  const rings = host.querySelectorAll(".ringVal");
+
+  function applyHighlight(activeKey){
+    cols.forEach((col, i) => {
+      const key = col.dataset.key;
+      const ring = col.querySelector(".ringVal");
+      if (!ring) return;
+
+      if (!activeKey){
+        ring.setAttribute("stroke", i === 0 ? greyA : greyB);
+        ring.style.opacity = "1";
+        ring.style.filter = "none";
+        return;
+      }
+
+      if (key === activeKey){
+        ring.setAttribute("stroke", accent);
+        ring.style.opacity = "1";
+        ring.style.filter = "brightness(1.03)";
+      } else {
+        ring.setAttribute("stroke", i === 0 ? greyA : greyB);
+        ring.style.opacity = "0.95";
+        ring.style.filter = "none";
+      }
+    });
+  }
+
+  // default highlight based on mode
+  applyHighlight(defaultKey);
+
+  // hover interactions
+  cols.forEach((col) => {
+    col.addEventListener("mousemove", (e) => {
+      const label = col.dataset.label;
+      const val = Number(col.dataset.value);
+      tip.textContent = `${label}: ${val} years old (avg)`;
+      tip.style.display = "block";
+      tip.style.left = (e.clientX + 12) + "px";
+      tip.style.top  = (e.clientY + 12) + "px";
+      applyHighlight(col.dataset.key);
+    });
+
+    col.addEventListener("mouseleave", () => {
+      tip.style.display = "none";
+      applyHighlight(defaultKey);
+    });
+  });
+
+  // subtle “draw in” animation
+  rings.forEach(ring => {
+    const dashArr = ring.getAttribute("stroke-dasharray").split(" ");
+    const dash = Number(dashArr[0]);
+    const gap = Number(dashArr[1]);
+
+    ring.style.transition = "stroke-dasharray 650ms ease, stroke 160ms ease, opacity 160ms ease";
+    ring.setAttribute("stroke-dasharray", `0 ${dash + gap}`);
+
+    requestAnimationFrame(() => {
+      ring.setAttribute("stroke-dasharray", `${dash} ${gap}`);
+    });
+  });
+}
+
 function renderBooksBar(mode){
   const host = document.getElementById("booksBar");
   const tip  = document.getElementById("booksBarTip");
@@ -393,6 +572,8 @@ function setMode(next){
   // Render interactive pie
   renderPreferencePie(next);
   renderBooksBar(next);
+  renderAgeViz(next);
+
 
 }
 
