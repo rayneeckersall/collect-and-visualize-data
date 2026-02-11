@@ -198,6 +198,104 @@ function renderPreferencePie(mode){
     });
   });
 }
+function renderPreferencePieCompare(){
+  const host = document.getElementById("comparePrefPie");
+  const tip  = document.getElementById("comparePrefPieTip");
+  if (!host || !tip) return;
+
+  const total = PREF_DATA.reduce((s,d)=>s + d.votes, 0);
+
+  const size = 520;
+  const cx = size/2, cy = size/2;
+  const r = 185;
+
+  // Compare colors: BOTH highlighted at once
+  const BLUE = "#5a6ea5";   // audiobook
+  const RED  = "#b26a6a";   // physical
+  const GREYS = ["rgba(31,36,48,.18)", "rgba(31,36,48,.28)", "rgba(31,36,48,.38)"];
+
+  const fillFor = (key, i) => {
+    if (key === "Audiobook") return BLUE;
+    if (key === "Physical Book") return RED;
+    return GREYS[i % GREYS.length]; // E-Book
+  };
+
+  // build slices
+  let angle = 0;
+  const slicesMarkup = PREF_DATA.map((d, i) => {
+    const pct = total ? (d.votes / total) * 100 : 0;
+    const sweep = (pct / 100) * 360;
+    const start = angle;
+    const end = angle + sweep;
+    angle = end;
+
+    return `
+      <path class="pie-slice"
+        data-key="${d.key}"
+        data-label="${d.label}"
+        data-votes="${d.votes}"
+        data-pct="${pct.toFixed(1)}"
+        fill="${fillFor(d.key, i)}"
+        d="${arcPath(cx, cy, r, start, end)}"></path>
+    `;
+  }).join("");
+
+  host.innerHTML = `
+    <svg viewBox="0 0 ${size} ${size}" role="img" aria-label="Format preference comparison donut">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="rgba(31,36,48,.06)"></circle>
+
+      ${slicesMarkup}
+
+      <!-- donut hole -->
+      <circle cx="${cx}" cy="${cy}" r="92" fill="white"></circle>
+
+      <text x="${cx}" y="${cy-6}" text-anchor="middle"
+            font-size="16" font-weight="900" fill="rgba(31,36,48,.85)">
+        Format Preference
+      </text>
+      <text x="${cx}" y="${cy+18}" text-anchor="middle"
+            font-size="12" fill="rgba(31,36,48,.55)">
+        hover slices for details
+      </text>
+    </svg>
+  `;
+
+  const slices = host.querySelectorAll(".pie-slice");
+
+  // Hover interaction: “pop” slice + tooltip
+  slices.forEach((p) => {
+    p.addEventListener("mousemove", (e) => {
+      const label = p.dataset.label;
+      const votes = Number(p.dataset.votes);
+      const pct   = p.dataset.pct;
+
+      // richer tooltip text
+      tip.innerHTML = `${label}<br><b>${votes}</b> votes • <b>${pct}%</b>`;
+      tip.style.display = "block";
+      tip.style.left = (e.clientX + 12) + "px";
+      tip.style.top  = (e.clientY + 12) + "px";
+
+      // subtle emphasis on hover: add a stroke + slightly higher opacity
+      slices.forEach(s => {
+        s.style.opacity = (s === p) ? "1" : "0.92";
+        s.style.filter = (s === p) ? "brightness(1.03)" : "none";
+        s.setAttribute("stroke", (s === p) ? "rgba(31,36,48,.25)" : "transparent");
+        s.setAttribute("stroke-width", (s === p) ? "2" : "0");
+      });
+    });
+
+    p.addEventListener("mouseleave", () => {
+      tip.style.display = "none";
+      slices.forEach((s) => {
+        s.style.opacity = "1";
+        s.style.filter = "none";
+        s.setAttribute("stroke", "transparent");
+        s.setAttribute("stroke-width", "0");
+      });
+    });
+  });
+}
+
 
 
 // ---------- Interactive Books Read Bar ----------
@@ -573,6 +671,40 @@ function setMode(next){
   renderPreferencePie(next);
   renderBooksBar(next);
   renderAgeViz(next);
+if (next === "compare") renderPreferencePieCompare();
+
+const showOverviewCards = next !== "compare";
+
+const cardFormat = document.getElementById("card-format");
+const cardBooks  = document.getElementById("card-books");
+
+if (cardFormat) cardFormat.style.display = showOverviewCards ? "" : "none";
+if (cardBooks)  cardBooks.style.display  = showOverviewCards ? "" : "none";
+
+const isCompare = next === "compare";
+
+// Panels
+const pOverview = document.getElementById("panel-overview");
+const pTrends = document.getElementById("panel-trends");
+const pDemo = document.getElementById("panel-demographics");
+const pCompare = document.getElementById("panel-extras");
+
+// Tabs row (Overview/Trends/Demographics)
+const tabsRow = document.getElementById("tabsRow");
+
+// Show ONLY compare panel in compare mode
+if (pOverview) pOverview.style.display = isCompare ? "none" : "";
+if (pTrends)   pTrends.style.display   = isCompare ? "none" : "none"; // trends only shown via setTab
+if (pDemo)     pDemo.style.display     = isCompare ? "none" : "none"; // demographics only shown via setTab
+if (pCompare)  pCompare.style.display  = isCompare ? "" : "none";
+
+// Hide the tabs row in compare mode
+if (tabsRow) tabsRow.style.display = isCompare ? "none" : "";
+
+// If leaving compare, restore the selected tab panel
+if (!isCompare) {
+  setTab(state.tab || "overview");
+}
 
 
 }
@@ -592,7 +724,8 @@ function setTab(next){
 
   // Extras panel exists for compare scroll target; keep it visible so scrollIntoView works
   const pExtras = document.getElementById("panel-extras");
-  if (pExtras) pExtras.style.display = "";
+if (pExtras) pExtras.style.display = (state.mode === "compare") ? "" : "none";
+
 
   // Badge label
   const focus = document.getElementById("focusBadge");
