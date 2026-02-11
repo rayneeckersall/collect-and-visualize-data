@@ -489,6 +489,115 @@ if (data.length === 0) {
   });
 }
 
+function renderAgeVizCompare(){
+  const host = document.getElementById("compareAgeViz");
+  const tip  = document.getElementById("compareAgeTip");
+  if (!host || !tip) return;
+
+  const BLUE = "#5a6ea5";
+  const RED  = "#b26a6a";
+  const greyTrack = "rgba(31,36,48,.10)";
+
+  const data = [
+    { key: "Audiobook", label: "Audiobook users", value: 45, color: BLUE },
+    { key: "Physical Book", label: "Physical book users", value: 47, color: RED },
+  ];
+
+  const MIN = 18, MAX = 65;
+  const pct = (v) => {
+    const clamped = Math.max(MIN, Math.min(MAX, v));
+    return (clamped - MIN) / (MAX - MIN);
+  };
+
+  const size = 260;
+  const cx = size/2, cy = size/2;
+  const r = 86;
+  const stroke = 18;
+  const C = 2 * Math.PI * r;
+
+  host.innerHTML = data.map((d) => {
+    const p = pct(d.value);
+    const dash = (C * p).toFixed(1);
+    const gap  = (C - C * p).toFixed(1);
+
+    return `
+      <div class="ageCol ageRing" data-key="${d.key}" data-label="${d.label}" data-value="${d.value}">
+        <div class="ageLabel">
+          <div class="name">${d.key === "Audiobook" ? "Audiobooks" : "Physical"}</div>
+          <div class="val"><span class="num">${d.value}</span></div>
+        </div>
+
+        <svg viewBox="0 0 ${size} ${size}" class="ringSvg" aria-label="${d.label} average age">
+          <defs>
+            <filter id="softGlowCompare" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <circle cx="${cx}" cy="${cy}" r="${r}"
+                  fill="none" stroke="${greyTrack}" stroke-width="${stroke}" />
+
+          <circle class="ringVal"
+                  cx="${cx}" cy="${cy}" r="${r}"
+                  fill="none"
+                  stroke="${d.color}"
+                  stroke-width="${stroke}"
+                  stroke-linecap="round"
+                  stroke-dasharray="${dash} ${gap}"
+                  transform="rotate(-90 ${cx} ${cy})"
+                   />
+
+          <text x="${cx}" y="${cy-4}" text-anchor="middle"
+                font-size="28" font-weight="900" fill="rgba(31,36,48,.88)">
+            ${d.value}
+          </text>
+          <text x="${cx}" y="${cy+22}" text-anchor="middle"
+                font-size="12" fill="rgba(31,36,48,.55)">
+            avg age
+          </text>
+          <text x="${cx}" y="${size-18}" text-anchor="middle"
+                font-size="11" fill="rgba(31,36,48,.40)">
+            scaled ${MIN}–${MAX}
+          </text>
+        </svg>
+
+        <div class="ageHint">Hover ring for details</div>
+      </div>
+    `;
+  }).join("");
+
+  const cards = host.querySelectorAll(".ageRing");
+  const rings = host.querySelectorAll(".ringVal");
+
+  // tooltip
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const label = card.dataset.label;
+      const val = Number(card.dataset.value);
+      tip.textContent = `${label}: ${val} years old (avg)`;
+      tip.style.display = "block";
+      tip.style.left = (e.clientX + 12) + "px";
+      tip.style.top  = (e.clientY + 12) + "px";
+    });
+    card.addEventListener("mouseleave", () => {
+      tip.style.display = "none";
+    });
+  });
+
+  // draw-in animation
+  rings.forEach(ring => {
+    const [dash, gap] = ring.getAttribute("stroke-dasharray").split(" ").map(Number);
+    ring.style.transition = "stroke-dasharray 650ms ease, stroke 160ms ease";
+    ring.setAttribute("stroke-dasharray", `0 ${dash + gap}`);
+    requestAnimationFrame(() => ring.setAttribute("stroke-dasharray", `${dash} ${gap}`));
+  });
+}
+
+
 function renderBooksBar(mode){
   const host = document.getElementById("booksBar");
   const tip  = document.getElementById("booksBarTip");
@@ -671,7 +780,11 @@ function setMode(next){
   renderPreferencePie(next);
   renderBooksBar(next);
   renderAgeViz(next);
-if (next === "compare") renderPreferencePieCompare();
+if (next === "compare") {
+  renderPreferencePieCompare();
+  renderAgeVizCompare();
+}
+
 
 const showOverviewCards = next !== "compare";
 

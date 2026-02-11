@@ -70,8 +70,8 @@
       <div class="grid">
         <article class="card" id="card-format">
           <h2>
-            <div>Format Preference <span>(your chart)</span></div>
-            <span>SVG</span>
+            <div>Format Preference</div>
+            <span>Interactive Chart</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -96,7 +96,7 @@
 <div class="pieTip" id="prefPieTip" style="display:none;"></div>
 
               <div class="callouts" id="callouts-pref">
-                <div class="callout"><b>Quick read:</b> Preferences can be influenced by accessibility, cost, multitasking, and attention.</div>
+                <div class="callout"><b>Insights:</b> Preferences can be influenced by accessibility, cost, multitasking, and attention.</div>
               </div>
             </div>
           </div>
@@ -104,8 +104,8 @@
 
         <article class="card" id="card-format">
           <h2>
-            <div>Books Read by Medium <span>(your chart)</span></div>
-            <span>SVG</span>
+            <div>Books Read by Medium</div>
+            <span>Interactive Chart</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -131,7 +131,7 @@
 
 
               <div class="callouts" id="callouts-books">
-                <div class="callout"><b>Tip:</b> Use Compare mode to show two interpretations side-by-side.</div>
+                <div class="callout"><b>Insights:</b> Use Compare mode to show two interpretations side-by-side.</div>
               </div>
             </div>
           </div>
@@ -144,7 +144,7 @@
       <div class="grid grid-1">
         <article class="card">
           <h2>
-            <div>Timeline <span>(your chart)</span></div>
+            <div>Timeline <span></span></div>
             <span>SVG</span>
           </h2>
           <div class="body">
@@ -170,7 +170,7 @@
 
 
               <div class="callouts" id="callouts-timeline">
-                <div class="callout"><b>Story idea:</b> Zoom into the biggest change and explain what might have driven it.</div>
+                <div class="callout"><b>Insights:</b> Zoom into the biggest change and explain what might have driven it.</div>
               </div>
             </div>
           </div>
@@ -183,8 +183,8 @@
       <div class="grid">
         <article class="card">
           <h2>
-            <div>Education <span>(swaps by medium)</span></div>
-            <span>Swap</span>
+            <div>Education</div>
+            <span>SVG</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -207,7 +207,7 @@
 </div>
 
               <div class="callouts" id="callouts-edu">
-                <div class="callout"><b>Why it matters:</b> Demographics can shape format choice and habits.</div>
+                <div class="callout"><b>Insights:</b> Demographics can shape format choice and habits.</div>
               </div>
             </div>
           </div>
@@ -215,8 +215,8 @@
 
         <article class="card">
           <h2>
-            <div>Average Age <span>(your chart)</span></div>
-            <span>SVG</span>
+            <div>Average Age <span></span></div>
+            <span>Interactive Chart</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -241,7 +241,7 @@
 <div class="ageTip" id="ageTip" style="display:none;"></div>
 
               <div class="callouts" id="callouts-age">
-                <div class="callout"><b>Idea:</b> Add a context toggle (commute / bedtime / studying / multitasking).</div>
+                <div class="callout"><b>Insights:</b> Add a context toggle (commute / bedtime / studying / multitasking).</div>
               </div>
             </div>
           </div>
@@ -255,8 +255,8 @@
       <div class="grid">
         <article class="card" id="card-format">
           <h2>
-            <div>Format Preference <span>(your chart)</span></div>
-            <span>SVG</span>
+            <div>Format Preference</div>
+            <span>Interactive Chart</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -285,8 +285,8 @@
 
         <article class="card" id="card-format">
           <h2>
-            <div>Avg. Age by Medium <span>(your chart)</span></div>
-            <span>SVG</span>
+            <div>Avg. Age by Medium</div>
+            <span>Interactive Chart</span>
           </h2>
           <div class="body">
             <div class="chart-frame">
@@ -300,9 +300,12 @@
   
                 </div>
               </div>
-<div class="svgwrap">
-            <img src="assets/Avg. Age of Medium.svg" alt="Average age of medium (SVG)" />
-          </div>
+              
+ <div class="svgwrap" id="compareAgeChart" style="transform: scale(1);">
+  <div id="compareAgeViz" class="ageHost ageStack"></div>
+</div>
+<div class="ageTip" id="compareAgeTip" style="display:none;"></div>
+
               <!-- <div class="svgwrap" id="booksChart" style="transform: scale(1);">
   <div id="booksBar" class="barHost"></div> -->
 </div>
@@ -322,7 +325,7 @@
       <div class="grid grid-1">
         <article class="card">
           <h2>
-            <div>Timeline <span>(your chart)</span></div>
+            <div>Timeline</div>
             <span>SVG</span>
           </h2>
           <div class="body">

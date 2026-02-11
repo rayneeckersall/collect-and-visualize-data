@@ -499,6 +499,13 @@
   transform: translateY(-2px);
 }
 
+.ageStack{
+  flex-direction: column;
+}
+
+.ageStack .ageRing{
+  width: 100%;
+}
 
     /* Insight chips + callouts */
     .chips{ display:flex; gap:8px; flex-wrap:wrap; }
