@@ -545,6 +545,19 @@
     }
     .callout b{ color: var(--ink); }
 
+
+.callouts-audio,
+.callouts-physical{
+  display: none;
+}
+
+.callouts.show .callouts-audio[data-show="true"],
+.callouts.show .callouts-physical[data-show="true"]{
+  display: block;
+}
+
+
+
     /* Compare mode */
     .compare{
       display:none;

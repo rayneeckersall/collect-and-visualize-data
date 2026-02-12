@@ -35,6 +35,28 @@ function swapImg(id, src){
     img.onload = () => (img.style.opacity = "1");
   }, 150);
 }
+function updateCalloutsForMode(){
+  const mode = state.mode; // "audio" | "physical" | "compare"
+
+  ["pref","books","timeline","edu","age"].forEach((key) => {
+    const wrap = document.getElementById(`callouts-${key}`);
+    if (!wrap) return;
+
+    const a = wrap.querySelector(".callouts-audio");
+    const p = wrap.querySelector(".callouts-physical");
+
+    if (a) a.dataset.show = (mode === "audio") ? "true" : "false";
+    if (p) p.dataset.show = (mode === "physical") ? "true" : "false";
+
+    // optional: in compare mode, hide insights entirely
+    if (mode === "compare"){
+      if (a) a.dataset.show = "false";
+      if (p) p.dataset.show = "false";
+    }
+  });
+}
+
+
 
 // ---------- Interactive Preference Pie ----------
 const PREF_DATA = [
@@ -731,6 +753,9 @@ function renderBooksBar(mode){
 function setMode(next){
   state.mode = next;
 
+  updateCalloutsForMode();
+
+
   const btnAudio = document.getElementById("btnAudio");
   const btnPhysical = document.getElementById("btnPhysical");
   const btnCompare = document.getElementById("btnCompare");
@@ -1043,5 +1068,6 @@ window.addEventListener("keydown", (e) => {
 
 // ---------- Init ----------
 setMode("physical");
+updateCalloutsForMode();
 setTab("overview");
 Object.keys(state.zoom).forEach(applyZoom);
